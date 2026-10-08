@@ -5,7 +5,7 @@
   /* ПОДКЛЮЧЕНИЕ ОТПРАВКИ: вставьте сюда URL формы (Formspree, sheets.google и т.п.)
      Пример: var FORM_ENDPOINT = "https://formspree.io/f/xxxxxxx";
      Пока пусто — форма работает в демо-режиме (показывает успех, ничего не шлёт). */
-  var FORM_ENDPOINT = "";
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/eprintseva.khristina@mail.ru";
 
   var PHONE = "+79099035586";
 
@@ -99,7 +99,10 @@
   var consent = overlay.querySelector(".pp-consent");
   var consentBox = overlay.querySelector("#pp-ok");
 
-  function openPopup(serviceHint) {
+  var reviewMode = false;
+
+  function openPopup(serviceHint, isReview) {
+    reviewMode = !!isReview;
     viewForm.style.display = "";
     viewOk.style.display = "none";
     form.reset();
@@ -108,6 +111,19 @@
     if (typeof serviceHint === "number" && SERVICES[serviceHint]) preset = SERVICES[serviceHint];
     else if (PAGE_SERVICE[page] !== undefined) preset = SERVICES[PAGE_SERVICE[page]];
     select.value = preset;
+    var title = overlay.querySelector(".pp-title");
+    if (title) title.textContent = isReview ? "Оставить отзыв" : "Оставить заявку";
+    var sub = overlay.querySelector(".pp-sub");
+    if (sub) sub.textContent = isReview
+      ? "Расскажите, как прошла уборка — мы опубликуем отзыв на сайте и в наших соцсетях."
+      : "Перезвоним в течение 15 минут и рассчитаем стоимость по вашему объекту.";
+    var submitBtn = overlay.querySelector(".pp-form .pp-submit");
+    if (submitBtn) submitBtn.textContent = isReview ? "Отправить отзыв" : "Отправить заявку";
+    var commentLbl = overlay.querySelector(".pp-row:last-of-type .lbl");
+    var commentInp = overlay.querySelector("#pp-comment");
+    if (commentInp) commentInp.placeholder = isReview
+      ? "Ваш отзыв о качестве уборки, общении с клинером, результате..."
+      : "Площадь, этаж, особые пожелания...";
     overlay.classList.add("open");
     document.body.style.overflow = "hidden";
     setTimeout(function () { overlay.querySelector("#pp-name").focus(); }, 60);
@@ -160,25 +176,78 @@
     var phoneEl = overlay.querySelector("#pp-phone");
     if (!validate(nameEl, phoneEl)) return;
     if (!consentBox.checked) { consent.classList.add("bad"); consentBox.focus(); return; }
+    var commentText = overlay.querySelector("#pp-comment").value;
     send({
       name: nameEl.value,
       phone: phoneEl.value,
       service: select.value,
-      comment: overlay.querySelector("#pp-comment").value,
+      comment: commentText,
       page: page
     }, function () {
       viewForm.style.display = "none";
+      var okView = overlay.querySelector(".pp-view-ok");
+      /* отзыв: добавляем карточку в карусель и даём отправить текст в WhatsApp */
+      if (reviewMode) {
+        addReviewCard(nameEl.value, select.value, commentText);
+        var okTitle = okView.querySelector("h3");
+        if (okTitle) okTitle.textContent = "Спасибо за отзыв!";
+        var okText = okView.querySelector("p");
+        if (okText) okText.textContent = "Отзыв опубликован на странице. Чтобы он точно дошёл до нас, отправьте его в WhatsApp — опубликуем в соцсетях.";
+        var oldShare = okView.querySelector(".pp-share");
+        if (oldShare) oldShare.remove();
+        var share = document.createElement("a");
+        share.className = "pp-submit pp-share";
+        share.target = "_blank";
+        share.rel = "noopener";
+        var waText = "Отзыв о услуге «" + select.value + "» (" + (nameEl.value || "клиент") + "): " + commentText;
+        share.href = "https://wa.me/79099035586?text=" + encodeURIComponent(waText);
+        share.textContent = "Отправить отзыв в WhatsApp";
+        share.style.display = "flex";
+        share.style.width = "auto";
+        share.style.margin = "0 auto 12px";
+        okView.querySelector(".pp-ok-close").before(share);
+      } else {
+        var okT = okView.querySelector("h3");
+        if (okT) okT.textContent = "Заявка принята!";
+        var oldShare2 = okView.querySelector(".pp-share");
+        if (oldShare2) oldShare2.remove();
+      }
       viewOk.style.display = "";
     });
   });
 
+  /* отзыв добавляется живьём в карусель отзывов текущей страницы */
+  function addReviewCard(name, service, text) {
+    var tracks = document.querySelectorAll(".rev-track");
+    var letter = (name || "К").trim().charAt(0).toUpperCase();
+    var now = new Date();
+    var months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+    var dateStr = now.getDate() + " " + months[now.getMonth()];
+    tracks.forEach(function (track) {
+      var card = document.createElement("article");
+      card.className = "rev-card rev-card-new";
+      card.innerHTML =
+        '<div class="rev-top">' +
+          '<div class="rev-ava">' + esc(letter) + '</div>' +
+          '<div class="rev-name"><b>' + esc(name || "Гость") + '</b><span>' + dateStr + ' · Клиент</span></div>' +
+          '<span class="rev-stars">★★★★★</span>' +
+        '</div>' +
+        '<span class="rev-badge">' + esc(service || "Уборка") + '</span>' +
+        '<p class="rev-text">' + esc(text || "Спасибо за работу!") + '</p>';
+      track.appendChild(card);
+    });
+    try { localStorage.setItem("chistota_review_" + now.getTime(), JSON.stringify({ name: name, service: service, text: text, date: dateStr })); } catch (e) {}
+  }
+
   /* ---------- intercept CTA anchors: popup, no scroll ---------- */
   function ctaAnchor(el) {
-    if (!el || el.tagName !== "A") return false;
+    if (!el) return false;
+    if (el.classList && el.classList.contains("rev-ghost")) return true;
+    if (el.tagName !== "A") return false;
     var href = el.getAttribute("href") || "";
     if (el.classList.contains("header-cta")) return true;
     if (href === "#order" || href.indexOf("#order") !== -1) return true;
-    if (el.classList.contains("btn-pink") && (href === "" || href === "#")) return true;
+    if ((el.classList.contains("btn-pink") || el.classList.contains("btn-ghost")) && (href === "" || href === "#")) return true;
     return false;
   }
 
@@ -187,11 +256,13 @@
     while (el && el !== document.body) {
       if (ctaAnchor(el)) {
         e.preventDefault();
-        var href = el.getAttribute("href") || "";
+        var href = el.getAttribute ? (el.getAttribute("href") || "") : "";
         var hint;
         var m = href.match(/^([a-z0-9-]+\.html)#/);
         if (m && PAGE_SERVICE[m[1]] !== undefined) hint = PAGE_SERVICE[m[1]];
-        openPopup(hint);
+        /* отзыв -> попап с адаптированным заголовком */
+        var isReview = (el.classList && (el.classList.contains("rev-ghost") || (el.textContent || "").toLowerCase().indexOf("оставить отзыв") !== -1));
+        openPopup(hint, isReview);
         return;
       }
       el = el.parentNode;
@@ -244,8 +315,8 @@
     };
     var textareas = container.querySelectorAll("textarea");
     if (textareas.length) data.comment = textareas[textareas.length - 1].value;
-    var servSel = container.querySelector(".select span, select");
-    if (servSel) data.service = servSel.textContent;
+    var servSel = container.querySelector("select") || container.querySelector(".select span");
+    if (servSel) data.service = servSel.tagName === "SELECT" ? servSel.value : servSel.textContent;
 
     var submitBtn = container.querySelector(".order-send, .hs-send");
     if (submitBtn) submitBtn.disabled = true;

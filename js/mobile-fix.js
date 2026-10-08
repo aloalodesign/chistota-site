@@ -60,7 +60,8 @@
       } else if (cs.display.indexOf("grid") !== -1) {
         target.style.width = "100%";
         target.style.minWidth = "0";
-        if (/px/.test(cs.gridTemplateColumns)) {
+        var tb = target.getBoundingClientRect();
+        if (tb.right > vw + 2 && /px/.test(cs.gridTemplateColumns)) {
           target.style.gridTemplateColumns = "1fr";
         }
       } else {

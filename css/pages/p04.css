@@ -232,3 +232,199 @@ select.hs-inp{appearance:none;background-image:url("data:image/svg+xml,%3Csvg wi
 .hs-exclude-left{width:auto;min-width:0;max-width:100%}
 .hs-order-left{width:auto;min-width:0;max-width:100%}
 }
+
+/* ===== p04 MOBILE @390 — сверено с _figma/ref2/p04_mobile.png ===== */
+@media (max-width:860px){
+  /* общий ритм: поля контейнера 16px (в макете текст начинается с x≈20) */
+  .hs-wrap{max-width:calc(100% - 32px)}
+  .sec-head{gap:7px}
+  main .sec-title{font-size:25px;line-height:1.25}
+  main .sec-sub{font-size:13.5px;line-height:1.5}
+
+  /* ---- hs-hero: 1441 -> ~1000 (макет ~1000) ---- */
+  .hs-hero{padding:6px 0 40px}
+  .hs-crumb{padding-top:14px}
+  .hs-hero-left{gap:14px;padding-top:12px}
+  .hs-hero-lead{gap:8px}
+  .hs-hero-lead p{font-size:14px;line-height:21px}
+  .hs-hero-meta{gap:24px;padding-top:6px}
+  .hs-meta-val{font-size:15px}
+  .hs-meta-val.serif{font-size:20px}
+  .hs-hero-cta{gap:16px;padding-top:4px;flex-wrap:wrap}
+  .hs-hero-cta .btn-pink{padding:14px 24px;font-size:14.5px}
+  .hs-hero-right{margin-top:22px}
+  .hs-hero-photo{height:240px;border-radius:20px}
+  .hs-hero-deco{height:262px;top:-12px;border-radius:24px}
+
+/* ---- hs-designer: полноценная стековая композиция ---- */
+.hs-designer{padding:40px 0 44px}
+.hs-designer .sec-title{font-size:23px;line-height:1.25}
+.hs-designer-card{margin-top:22px;flex-direction:column;gap:14px;padding:18px 16px;border-radius:22px}
+.hs-designer-left{width:100%;max-width:100%;flex:none;gap:10px}
+.hs-designer-photo{width:100%;max-width:100%;height:230px;border-radius:16px}
+.hs-yuta{font-size:13px}
+.hs-designer-body{width:100%;gap:12px;min-width:0}
+.hs-designer-body h3{font-size:19px;line-height:1.25}
+.hs-designer-body>p{font-size:13.5px;line-height:20px}
+.hs-designer-list{gap:9px}
+.hs-designer-list .hs-check{font-size:13.5px;line-height:19px;gap:10px}
+.hs-check{flex-wrap:nowrap}
+.hs-check i{flex:none}
+.hs-designer-tags{grid-template-columns:1fr;gap:10px;margin-top:4px}
+.hs-designer-tags>*{min-width:0}
+.hs-tagcard{padding:14px 14px 15px;border-radius:16px;gap:8px}
+.hs-tagcard h4{font-size:11.5px;letter-spacing:.06em;line-height:1.3}
+.hs-tagcard ul{gap:6px}
+.hs-tagcard li{font-size:13px;line-height:18px;gap:7px}
+.hs-designer-result{margin-top:16px;font-size:13px;line-height:20px}
+.hs-check i{width:22px;height:22px;font-size:12px}
+.hs-check{gap:10px}
+
+  /* ---- hs-method: 2395 -> ~850 (макет-аналог «Подготовка» ~850) ---- */
+  .hs-method{padding:40px 0 44px}
+  .hs-method-grid{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .hs-method-grid>*{min-width:0}
+  .hs-step{padding:12px 12px 13px;border-radius:18px;gap:6px}
+  .hs-step-num{font-size:16px}
+  .hs-step h3{font-size:14px;line-height:1.25}
+  .hs-step>p{font-size:11.5px;line-height:15.5px}
+  .hs-step ul{grid-template-columns:1fr;gap:4px;padding-top:2px}
+  .hs-step ul li{font-size:11px;line-height:14.5px;gap:5px}
+  .hs-step-note{padding:7px 9px;font-size:11px;line-height:15px;border-radius:12px}
+
+  /* ---- hs-zones: 3593 -> ~3150 (макет ~3140) ---- */
+  .hs-zones{padding:44px 0 48px}
+  .hs-zones-grid{margin-top:24px;gap:14px}
+  .hs-zone{padding:20px 18px 18px;border-radius:20px;gap:10px}
+  .hs-zone h3{font-size:16.5px}
+  .hs-zone ul{gap:8px}
+  .hs-zone ul li{font-size:13.5px;line-height:19px;gap:8px}
+  .hs-extra{padding-top:12px;gap:8px}
+  .hs-extra-pills{gap:6px}
+  .hs-pill{padding:5px 10px;font-size:11.5px}
+  .hs-zones-bottom{margin-top:14px;gap:14px}
+  .hs-warn{padding:18px 20px;border-radius:20px}
+  .hs-warn h3{font-size:18px}
+  .hs-warn p{margin-top:8px;font-size:13px;line-height:19px}
+  .hs-combo{padding:18px 20px;border-radius:20px;gap:8px}
+  .hs-combo h3{font-size:17px}
+  .hs-combo p{font-size:13px;line-height:19px}
+
+  /* ---- hs-formats: 1713 -> ~1150 (макет ~1175) ---- */
+  .hs-formats{padding:40px 0 44px}
+  .hs-formats-grid{margin-top:22px;gap:12px}
+  .hs-fmt{padding:16px 16px 18px;border-radius:18px;gap:8px}
+  .hs-fmt-num{width:28px;height:28px;font-size:12px;border-radius:14px}
+  .hs-fmt h3{font-size:15.5px}
+  .hs-fmt>p{font-size:12.5px;line-height:17.5px}
+  .hs-fmt ul{gap:6px;padding-top:10px}
+  .hs-fmt ul li{font-size:12px;line-height:16.5px;gap:6px}
+
+  /* ---- hs-tools: 2299 -> ~1050 (макет ~980) ---- */
+  .hs-tools{padding:44px 0 48px}
+  .hs-tools-grid{margin-top:24px;grid-template-columns:1fr 1fr;gap:12px}
+  .hs-tools-grid>*{min-width:0}
+  .hs-tool{padding:16px 15px 17px;border-radius:18px;gap:8px}
+  .hs-tool-num{width:28px;height:28px;font-size:12px;border-radius:14px}
+  .hs-tool h3{font-size:15.5px}
+  .hs-tool>p{font-size:12.5px;line-height:17.5px}
+  .hs-tool .hs-extra-pills{padding-top:10px;gap:6px}
+  .hs-tools-panel{margin-top:14px;padding:16px 16px 18px;border-radius:18px;gap:10px}
+  .hs-tools-panel-head{gap:8px}
+  .hs-tools-panel-head h3{font-size:17px}
+  .hs-tools-panel-head p{font-size:12px;line-height:17px}
+  .hs-tools-panel .hs-extra-pills{display:block;column-count:2;column-gap:12px;gap:0}
+  .hs-tools-panel .hs-pill{display:inline-flex;margin:0 6px 6px 0;padding:4px 9px;break-inside:avoid;-webkit-column-break-inside:avoid;vertical-align:top}
+
+  /* ---- hs-exclude: 1082 -> ~760 (макет ~730) ---- */
+  .hs-exclude{padding:40px 0 44px}
+  .hs-exclude-in{gap:20px}
+  .hs-exclude-left{gap:12px}
+  .hs-exclude-left h2{font-size:25px;line-height:1.2}
+  .hs-exclude-note{padding:13px 15px;font-size:13px;line-height:19px;border-radius:14px}
+  .hs-exclude-card{padding:18px 18px 20px;border-radius:20px;gap:12px}
+  .hs-exclude-card ul{gap:9px}
+  .hs-exclude-card li{font-size:13.5px;line-height:18px;gap:9px}
+  .hs-exclude-card li i{width:20px;height:20px;font-size:11px}
+
+  /* ---- hs-how: 1849 -> ~850 (макет ~850, 2 колонки) ---- */
+  .hs-how{padding:40px 0 44px}
+  .hs-how-grid{margin-top:22px;grid-template-columns:1fr 1fr;gap:12px}
+  .hs-how-grid>*{min-width:0}
+  .hs-how-col{gap:12px;min-width:0}
+  .hs-how-step{padding:13px 13px 14px;border-radius:16px;gap:6px}
+  .hs-how-step b{font-size:11px}
+  .hs-how-step h3{font-size:14px;line-height:1.25}
+  .hs-how-step p{font-size:11.5px;line-height:16px}
+  .hs-checklist{grid-column:1/-1;padding:16px 16px 18px;border-radius:18px;gap:10px}
+  .hs-checklist h3{font-size:16px}
+  .hs-checklist>p{font-size:12px;line-height:17px}
+  .hs-checklist ul{gap:6px}
+  .hs-checklist li{font-size:12.5px;line-height:17px;gap:8px}
+
+  /* ---- hs-ba: 1419 -> ~450 (макет ~410) ---- */
+  .hs-ba{padding:0 0 48px}
+  .hs-ba-grid{margin-top:22px;grid-template-columns:1fr 1fr;gap:12px}
+  .hs-ba-grid>*{min-width:0}
+  .hs-ba-pics img{height:112px}
+  .hs-ba-cap{padding:9px 6px;font-size:13px}
+
+  /* ---- hs-fit: 1432 -> ~1300 (макет ~1320) ---- */
+  .hs-fit{padding:52px 0 56px}
+  .hs-fit-grid{margin-top:24px;gap:16px}
+  .hs-fit-bottom{margin-top:16px;padding:20px 20px 22px;gap:16px;border-radius:20px}
+  .hs-fit-bottom h3{font-size:16.5px}
+  .hs-fit-bottom p{margin-top:6px;font-size:13px;line-height:19px}
+  .hs-fit-bottom .btn-pink{padding:13px 22px;font-size:14px}
+
+  /* ---- order: 1166 -> ~980 (макет ~990) ---- */
+  .hs-order{padding:52px 0 56px}
+  .hs-order-in{gap:24px}
+  .hs-order-left{gap:14px}
+  .hs-order-left h2{font-size:30px;line-height:1.2}
+  .hs-order-left>p{font-size:14px;line-height:21px}
+  .hs-order-list li{font-size:13.5px;line-height:19px}
+  .hs-order-form{gap:14px}
+  .hs-inp{padding:13px 15px;font-size:14px}
+  .hs-textarea{min-height:96px;padding:13px 15px;font-size:14px;line-height:20px}
+  .hs-send{padding:15px;font-size:15px}
+  .hs-attach{gap:12px}
+  .hs-attach-add{width:64px;height:64px;font-size:22px}
+  .hs-attach-hint{font-size:12.5px;line-height:18px}
+
+  /* ---- hs-other: 1662 -> ~520 (макет ~495, 2 колонки) ---- */
+  .hs-other{padding:0 0 56px}
+  .hs-other-head{margin-bottom:20px}
+  .hs-other-head h2{font-size:27px}
+  .hs-other-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .hs-other-grid>*{min-width:0}
+  .hs-os img{height:130px}
+  .hs-os h3{padding:12px 12px 14px;font-size:14px;line-height:1.3}
+
+  /* ---- footer: 862 -> ~700 ---- */
+  .page .footer{padding:26px 0 16px}
+  .page .footer-in{gap:16px}
+  .page .footer-cols{gap:16px 12px}
+  .page .footer-col{gap:7px}
+  .page .footer-logo{width:56px;height:56px}
+  .page .footer-links{gap:6px}
+  .page .footer-links a{font-size:13.5px}
+  .page .hours-row{width:100%;font-size:13.5px}
+  .page .footer .contact b{font-size:13px} /* @chistota_v_detalyah в одну строку */
+  .page .footer-bottom{gap:6px;font-size:12.5px}
+  .page .requisites{font-size:11px;line-height:1.4}
+  /* отзывы: компактная шапка (карусель не трогаем) */
+  .page .reviews{padding-top:32px;padding-bottom:36px}
+  .page .revs-bottom{gap:10px}
+  .page .revs-bottom .btn-pink{padding:13px 22px;font-size:14px}
+}
+
+/* final polish: hero chip flows below photo instead of overlapping it */
+@media (max-width: 860px){
+  .hs-hero-chip{position:static;display:block;margin-top:12px;text-align:center;max-width:100%!important}
+}
+
+/* ===== homestaging: компактнее kompleks (mobile) ===== */
+@media (max-width: 860px){
+  .hs-complex{padding:26px 0 40px}
+}

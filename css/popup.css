@@ -239,3 +239,7 @@
   .pp-title { font-size: 26px; }
   .pp-form .pp-row2 { grid-template-columns: 1fr; }
 }
+/* кнопка «Отправить отзыв в WhatsApp» в успехе */
+.pp-share{ text-decoration:none; }
+.pp-share:hover{ background:#d9446f!important; }
+.pp-view-ok .pp-ok-close{ margin-top:4px; }

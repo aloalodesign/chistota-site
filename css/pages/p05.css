@@ -194,7 +194,7 @@
   .reviews .rev-track-wrap{margin-right:0}
 }
 @media (max-width:720px){
-  .tasks-grid,.when-grid,.prep-grid,.steps-grid,.fit-cols,.others-grid,.order5-row{grid-template-columns:1fr}
+  .tasks-grid,.when-grid,.prep-grid,.steps-grid,.fit-cols,.order5-row{grid-template-columns:1fr}
   .hero5-stats{flex-wrap:wrap;gap:24px}
   .hero5 h1{font-size:40px}
   .zone{grid-template-columns:1fr}
@@ -211,4 +211,137 @@
 .dp-card{width:auto;min-width:0;max-width:100%}
 .reviews .rev-card{width:auto;min-width:0;max-width:100%}
 .order5-info{width:auto;min-width:0;max-width:100%}
+
+/* ---- mobile polish (390) ---- */
+.hero5{padding:28px 0 40px}
+.crumbs{margin-bottom:12px}
+.hero5-left .hero-badge{order:0;align-self:flex-start;text-align:left;font-size:12px}
+.hero5 h1{font-size:32px;margin-top:14px}
+.hero5-lead{margin-top:14px;gap:10px}
+.hero5-lead p{font-size:15px;line-height:24px}
+.hero5-tags{gap:8px;margin-top:16px}
+.hero5-tags span{padding:7px 12px;font-size:13px}
+.hero5-stats{gap:14px 24px;margin-top:20px}
+.hero5-stat b{margin-top:6px;font-size:14px}
+.hero5-cta{flex-direction:column;align-items:stretch;gap:10px;margin-top:24px}
+.hero5-cta .btn{width:100%;padding:14px 20px;font-size:15px}
+.hero5-right{margin-top:0}
+.hero5-deco{height:calc(100% + 52px)}
+.hero5-photo{height:320px}
+.hero5-chip{top:12px;right:12px;padding:9px 12px;font-size:12px;border-radius:10px;max-width:calc(100% - 24px)}
+.hero5-mark{left:auto;right:12px;bottom:12px;width:110px}
+
+.complex{padding:24px 0 48px}
+.complex-left h2{font-size:30px}
+.complex-mini{margin-top:20px}
+.check-grid li{padding:4px 0;font-size:14px}
+
+.sec-head .sec-sub br{display:none}
+.programs{padding:40px 0 48px}
+.prog-card{margin-top:18px;padding:18px 16px 20px;border-radius:20px;gap:4px 0}
+.prog-card + .prog-card{margin-top:14px}
+.prog-left h3{font-size:22px}
+.prog-desc{margin-top:8px;font-size:13.5px;line-height:21px}
+.prog-label{margin-top:18px}
+.prog-chips{gap:8px;margin-top:10px}
+.prog-chips span{padding:6px 10px;font-size:12px}
+.zone{gap:6px;padding:9px 0}
+.zone h4{font-size:14px}
+.zone p{font-size:13px;line-height:19px}
+.prog-note{padding-top:14px;margin-top:14px;font-size:12.5px;line-height:19px}
+.prog-extra{padding:14px 16px;margin-top:16px;border-radius:14px}
+.prog-extra-list{grid-template-columns:1fr;gap:8px;margin-top:10px}
+.prog-extra-list span{font-size:12.5px;line-height:17px}
+
+.materials{padding:40px 0 44px}
+.materials-left h2{font-size:30px}
+.materials-left p{margin-top:10px;font-size:14.5px;line-height:23px}
+.mat-chips{gap:8px;padding-top:0}
+.mat-chips span{padding:8px 14px;font-size:13px}
+
+.tasks{padding:40px 0 48px}
+.tasks-grid{gap:14px;margin-top:20px}
+.task-card{padding:18px 16px 20px;border-radius:18px}
+.task-num{width:30px;height:30px;border-radius:15px;font-size:14px}
+.task-head h3{font-size:16px}
+.task-text{margin-top:10px;font-size:13.5px;line-height:21px}
+.task-list{gap:8px;margin-top:12px}
+.task-list li{padding-right:0;font-size:13px;line-height:18px}
+.task-note{padding-top:12px;margin-top:14px;font-size:12px;line-height:18px}
+
+.when{padding:40px 0 48px}
+.when-grid{gap:12px;margin-top:20px}
+.when-card{padding:18px 16px 20px;border-radius:16px}
+.when-card p{margin-top:8px}
+.when-card ul{margin-top:12px;gap:8px}
+.when-card li{font-size:13px;line-height:19px}
+
+.extra{padding:40px 0 44px}
+.extra-left h2{font-size:30px}
+.extra-left p{margin-top:10px;font-size:14.5px;line-height:23px}
+.extra-list{gap:10px;padding-top:0}
+.extra-list li{font-size:14px;line-height:21px}
+
+.excluded{padding:0 0 48px}
+.excluded-panel{padding:24px 20px;gap:20px;border-radius:22px}
+.excluded-left h2{margin-top:10px;font-size:30px}
+.excluded-left p{margin-top:12px;font-size:14px;line-height:22px}
+.excluded-list{gap:10px;padding-top:0}
+.excluded-list li{font-size:14px;line-height:21px}
+
+.prep{padding:40px 0 48px}
+.prep-grid{gap:12px;margin-top:20px}
+.prep-card{padding:16px 18px}
+.prep-card h3{margin-top:8px;font-size:15px}
+.prep-card p{margin-top:6px;font-size:12.5px;line-height:19px}
+
+.fit{padding:40px 0 48px}
+.fit-cols{gap:20px;margin-top:20px}
+.fit-col h3{font-size:16.5px}
+.fit-col ol,.fit-col ul{margin-top:14px;gap:10px}
+.fit-col li{font-size:14px;line-height:21px}
+.fit-box{margin-top:16px;padding:16px 18px;border-radius:16px}
+.fit-box p{font-size:13px;line-height:19px}
+.fit-box .btn{margin-top:12px;padding:12px 20px;font-size:13.5px}
+
+.steps{padding:40px 0 48px}
+.steps-grid{grid-template-columns:1fr 1fr;gap:18px 16px;margin-top:20px}
+.step{min-width:0}
+.step-num{font-size:24px}
+.step h3{margin-top:6px;font-size:15px}
+.step p{margin-top:5px;max-width:none;font-size:12.5px;line-height:18.5px}
+
+.doposle{padding:8px 0 48px}
+.doposle-row{gap:14px;margin-top:20px}
+.dp-pics{height:200px}
+.dp-card figcaption{padding:10px;font-size:14px}
+
+.works{padding:8px 0 48px}
+.works-row{gap:14px;margin-top:20px}
+.work-card{padding:18px 16px 20px;border-radius:20px}
+.work-card h3{font-size:20px}
+.work-list{grid-template-columns:1fr;gap:10px;margin-top:12px}
+.work-list li{padding-right:0;font-size:13px;line-height:19px}
+.work-sub{margin-top:8px;font-size:13px;line-height:19px}
+.work-chips{gap:6px;margin-top:10px}
+.work-chips span{padding:6px 12px;font-size:12.5px}
+.work-note{margin-top:12px;font-size:12px;line-height:18px}
+
+.order{padding:40px 0 48px}
+.order5-info{padding-top:0}
+.order5-info h2{font-size:30px}
+.order5-sub{margin-top:10px;font-size:14px;line-height:22px}
+.order5-feats{margin-top:14px;gap:10px}
+.order5-feats li{font-size:14px}
+.order5-phone{margin-top:16px;font-size:16px}
+.order5-form{gap:10px}
+.order5-row{gap:10px}
+.order5-form .textarea{min-height:96px}
+
+.others{padding:8px 0 48px}
+.others-head{margin-bottom:18px}
+.others-head h2{font-size:28px}
+.others-grid{gap:12px}
+.other-card img{height:180px}
+.other-card h3{padding:10px 12px 12px;font-size:14px}
 }

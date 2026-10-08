@@ -309,3 +309,204 @@ ul.p11-checks.no li::before{content:"✕"}
 .p11-order-left{width:auto;min-width:0;max-width:100%}
 .p11-faq .faq-list{width:auto;min-width:0;max-width:100%}
 }
+
+/* ===================== p11 mobile @390 — match p11_mobile Figma ===================== */
+@media (max-width:860px){
+
+  /* ---------- shared: check lists ---------- */
+  ul.p11-checks{gap:6px}
+  ul.p11-checks li{font-size:15px;line-height:24px;padding-left:30px}
+  ul.p11-checks li::before{width:20px;height:20px;border-radius:10px;top:3px;font-size:10px}
+  ul.p11-checks.two{gap:6px 18px}
+  ul.p11-checks.four{grid-template-columns:1fr;gap:6px}
+  ul.p11-checks.yes li,ul.p11-checks.no li{font-size:15px;line-height:23px;padding-left:32px}
+  ul.p11-checks.yes li::before,ul.p11-checks.no li::before{width:22px;height:22px;border-radius:11px;font-size:11px}
+
+  /* ---------- shared: section heads ---------- */
+  .p11-sec-head{margin-bottom:26px;gap:0}
+  /* kicker is an inline span -> force block so text-align:center actually centres it */
+  .p11-sec-head .kicker{display:block;text-align:center}
+
+  /* ---------- hero ---------- */
+  .p11-hero{padding:30px 0 44px}
+  .p11-crumb{font-size:12px;margin-bottom:18px}
+  /* css/mobile.css sets .hero-badge{order:1} which pushes it below the stats */
+  .p11-hero-left .hero-badge{order:-1;align-self:flex-start;text-align:left}
+  .p11-hero-cols{gap:24px}
+  .p11-hero-left{gap:14px}
+  .p11-hero-left h1{font-size:34px;margin-top:4px}
+  .p11-hero-lead{font-size:15px;line-height:23px}
+  .p11-stats{flex-wrap:nowrap;justify-content:space-between;gap:10px;padding-top:8px;margin-top:0}
+  .p11-stat span{font-size:10px;letter-spacing:.08em}
+  .p11-stat b{font-size:16px}
+  .p11-hero-photo{margin-top:0}
+  .p11-hero-photo img{height:250px;border-radius:20px}
+  .p11-hero-pill{top:14px;right:8px;padding:8px 14px;font-size:12px}
+  .p11-hero-bottom{row-gap:18px;margin-top:0}
+  .p11-hero-btn{padding:9px 20px;font-size:15px}
+  .p11-hero-sub{font-size:17px}
+  .p11-hero-card{padding:20px 18px;gap:16px;border-radius:20px}
+  .p11-hero-note{font-size:14px;line-height:21px}
+  .p11-hero-note b{font-size:15px;margin-bottom:2px}
+  .p11-hero-list{gap:6px 16px}
+  .p11-hero-list li{font-size:14px;line-height:21px}
+  .p11-hero-card-foot{padding-top:16px;gap:0}
+  .p11-hero-card-foot p{padding-left:26px;font-size:13.5px;line-height:20px}
+
+  /* ---------- format ---------- */
+  .p11-format{padding:48px 0 44px}
+  .p11-format-grid{gap:16px}
+  .p11-fcard{padding:22px 20px;border-radius:20px}
+  .p11-fcard-head{gap:10px;margin-bottom:10px}
+  .p11-fnum{width:32px;height:32px;border-radius:16px;font-size:14px}
+  .p11-fcard-head h3{font-size:17px}
+  .p11-fcard-desc{font-size:14px;line-height:21px;margin-bottom:12px}
+  .p11-fcard.wide{gap:18px;padding:20px}
+  .p11-fcard.wide .p11-fcard-desc{margin-bottom:0}
+  .p11-zones-row{gap:8px}
+  .p11-zone-chip{padding:8px 14px;font-size:13px;gap:7px}
+
+  /* ---------- composition ---------- */
+  .p11-comp{padding:44px 0 48px}
+  .p11-comp-grid{gap:16px}
+  .p11-zcard{padding:22px 20px;border-radius:20px}
+  .p11-zcard-head{gap:10px;margin-bottom:14px}
+  .p11-zic{width:36px;height:36px;border-radius:18px;font-size:15px}
+  .p11-zcard-head h3{font-size:17px}
+  .p11-znote{font-size:12.5px;line-height:18px;padding-top:12px}
+  .p11-comp-grid .p11-fcard.wide{gap:16px;padding:20px}
+  .p11-dop-title{font-size:14px;line-height:21px}
+  .p11-dop-title b{font-size:15px}
+
+  /* ---------- special cases ---------- */
+  .p11-cases{padding:44px 0 48px}
+  .p11-cases-grid{gap:16px}
+  .p11-cases-grid .p11-zcard h3{font-size:18px;line-height:24px;margin-bottom:8px}
+  .p11-cases-grid .p11-fcard-desc{margin-bottom:12px}
+
+  /* ---------- smell card ---------- */
+  .p11-smell{padding:44px 0 48px}
+  .p11-smell-card{padding:22px 20px;border-radius:20px}
+  .p11-smell-top{gap:16px;margin-bottom:18px}
+  .p11-smell-left{gap:8px}
+  .p11-smell-left h3{font-size:23px}
+  .p11-smell-desc{font-size:14px;line-height:21px;max-width:100%}
+  .p11-smell-card ul.p11-checks.four{margin-bottom:18px}
+  .p11-smell-foot{padding:14px 16px;border-radius:14px;gap:8px}
+  .p11-smell-foot b{font-size:14px}
+  .p11-smell-foot p{font-size:13px;line-height:19px}
+
+  /* ---------- principles ---------- */
+  .p11-principles{padding:0 0 44px}
+  .p11-principles .p11-sec-head{margin-bottom:24px}
+  .p11-princ-grid{gap:14px}
+  .p11-princ{padding:18px 18px 20px;border-radius:18px}
+  .p11-princ-num{font-size:26px}
+  .p11-princ h3{font-size:16px;padding:10px 0 6px}
+  .p11-princ p{font-size:13.5px;line-height:20px}
+
+  /* ---------- not included ---------- */
+  .p11-notin{padding:0 0 44px}
+  .p11-notin-box{padding:24px 20px;border-radius:24px;gap:22px}
+  .p11-notin-left{gap:12px}
+  .p11-notin-left h3{font-size:26px}
+  .p11-notin-left p{font-size:14px;line-height:21px}
+  .p11-notin-list{padding-top:0}
+
+  /* ---------- who ---------- */
+  .p11-who{padding:0 0 56px}
+  .p11-who-cols{gap:28px}
+  .p11-who-title{padding:9px 18px;font-size:15px;margin-bottom:18px}
+  .p11-who-note{margin-top:36px;font-size:13px;line-height:19px}
+
+  /* ---------- steps ---------- */
+  .p11-steps{padding:44px 0 44px}
+  .p11-steps-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .p11-step{padding:18px 16px 20px;border-radius:18px}
+  .p11-step-num{font-size:24px}
+  .p11-step h3{font-size:16px;padding:10px 0 6px}
+  .p11-step p{font-size:13px;line-height:19px}
+  .p11-regular{gap:18px;padding:20px 18px;border-radius:20px}
+  .p11-regular-left h3{font-size:17px;margin-bottom:8px}
+  .p11-regular-left p{font-size:13.5px;line-height:20px}
+  .p11-regular-chips{gap:8px}
+  .p11-regular-chips span{padding:9px 14px;font-size:13px}
+
+  /* ---------- gallery ---------- */
+  .p11-gallery{padding:36px 0 40px}
+  .p11-gallery-head{gap:8px;margin-bottom:20px}
+  .p11-gallery-head h3{font-size:20px}
+  .p11-gallery-grid{grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .p11-gallery-grid img{height:190px;border-radius:16px}
+  .p11-gallery-grid figcaption{padding-top:8px;font-size:13px}
+
+  /* ---------- equipment ---------- */
+  .p11-equip{padding:36px 0 44px}
+  .p11-equip-grid{gap:16px}
+  .p11-equip-intro{font-size:13.5px;line-height:20px;margin-bottom:12px}
+  .p11-equip-grid .p11-zcard ul.p11-checks li{font-size:14.5px;line-height:22px}
+
+  /* ---------- reviews (beats css/mobile.css via specificity) ---------- */
+  .page .reviews{padding:36px 16px 44px}
+  .reviews .rev-text{font-size:13.5px;line-height:1.55}
+  .reviews .rev-card{padding:18px 18px 16px}
+
+  /* ---------- order ---------- */
+  .p11-order{padding:36px 0 32px}
+  .p11-order-cols{gap:30px}
+  .p11-order-left{gap:16px}
+  .p11-order-left h2{font-size:30px}
+  .p11-order-desc{font-size:14px;line-height:21px}
+  /* design has every field stacked in ONE column (all inputs start at x=60) */
+  .p11-order-inputs{grid-template-columns:1fr;gap:12px}
+  .p11-order-hint{font-size:12px}
+
+  /* ---------- faq ---------- */
+  .p11-faq.faq{padding:40px 16px 52px}
+  .page .faq-item{padding:14px 16px}
+
+  /* ---------- other services ---------- */
+  .p11-other{padding:24px 0 44px}
+  .p11-other-head{margin-bottom:20px}
+  .p11-other-head .sec-title{font-size:28px}
+  .p11-other-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .p11-ocard img{height:132px}
+  .p11-ocard h3{padding:12px 14px 14px;font-size:14px;line-height:1.3}
+
+  /* ---------- footer (beats css/mobile.css via specificity) ----------
+     Design is a single column: centred logo/desc/socials, then contacts,
+     hours and nav stacked at the left edge (x=20 in the mock). */
+  .page .footer{padding:22px 0 16px}
+  /* mobile.css keeps .footer-in at 16px side padding -> content starts at x=32,
+     the design puts every footer block at x=20 */
+  .page .footer-in{gap:16px;padding:0 4px}
+  .page .footer-cols{grid-template-columns:1fr;gap:18px}
+  .page .footer-col{gap:12px}
+  .page .footer-col:nth-child(1){order:1;align-items:center;text-align:center}
+  .page .footer-col:nth-child(3){order:2}
+  .page .footer-col:nth-child(4){order:3}
+  .page .footer-col:nth-child(2){order:4}
+  .page .footer-col:nth-child(1) .footer-desc{max-width:340px}
+  .page .footer-col:nth-child(1) .socials{justify-content:center}
+  .page .footer .hours-row{justify-content:flex-start;gap:12px}
+  .page .footer-bottom{padding-top:14px;gap:6px;flex-direction:column;align-items:center;text-align:center}
+}
+
+/* ===== format «Как мы подстраиваем уборку»: компакт как в эталоне (mobile) ===== */
+@media (max-width: 860px){
+  .p11-format{padding:40px 0 34px}
+  .p11-sec-head{margin-bottom:18px}
+  .p11-format-grid{grid-template-columns:1fr;gap:12px}
+  .p11-fcard{padding:16px 16px 17px;border-radius:18px}
+  .p11-fcard-head{gap:10px;margin-bottom:8px}
+  .p11-fnum{width:30px;height:30px;border-radius:15px;font-size:13px}
+  .p11-fcard-head h3{font-size:16.5px;line-height:1.25}
+  .p11-fcard-desc{font-size:14px;line-height:20px;margin-bottom:9px}
+  .p11-fcard.wide{gap:12px;padding:16px}
+  ul.p11-checks{gap:7px}
+  ul.p11-checks.two{grid-template-columns:1fr;gap:7px}
+  ul.p11-checks li{font-size:14.5px;line-height:22px;padding-left:28px}
+  ul.p11-checks li::before{width:20px;height:20px;border-radius:10px;top:1px;font-size:10px}
+  .p11-zones-row{gap:7px}
+  .p11-zone-chip{padding:7px 12px;font-size:12.5px;gap:6px}
+}

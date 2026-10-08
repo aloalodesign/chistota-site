@@ -14,7 +14,7 @@
 .sv-stats{display:flex;gap:20px;padding-top:18px}
 .sv-stat{background:#fff;border:1px solid var(--border3);border-radius:14px;padding:13px 18px 15px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow-sm)}
 .sv-stat span{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--pink3)}
-.sv-stat b{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--ink);white-space:nowrap}
+.sv-stat b{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--ink);white-space:normal}
 .sv-stat.hot b{color:var(--pink3)}
 .sv-cta{display:flex;align-items:center;gap:74px;padding-top:14px}
 .sv-cta .btn-pink{padding:17px 34px 16px;font-size:16px}
@@ -196,4 +196,159 @@
 .ord-form{width:auto;min-width:0;max-width:100%}
 .inc-grid{grid-auto-flow:row;grid-template-rows:none;grid-template-columns:1fr}
 .mt-card .dot-list{grid-template-columns:1fr}
+
+/* ==== p09 mobile refinement (390px) ==== */
+/* --- hero --- */
+.p9 .sv-hero{padding:36px 0 44px}
+.p9 .crumbs{height:auto;margin-bottom:14px;font-size:11.5px;flex-wrap:wrap;gap:4px 8px}
+.p9 .sv-left{gap:12px}
+.p9 .sv-left .hero-badge{order:0;align-self:flex-start}
+.p9 .sv-left h1{font-size:29px;line-height:1.18}
+.p9 .sv-lead{font-size:14px;line-height:1.55}
+.p9 .sv-sub{font-size:13.5px;line-height:1.5}
+.p9 .sv-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-top:12px}
+.p9 .sv-stat{min-width:0;padding:10px 10px 11px;gap:4px;border-radius:12px}
+.p9 .sv-stat span{font-size:10px;letter-spacing:.06em}
+.p9 .sv-stat b{font-size:13px;line-height:1.25;white-space:normal;overflow-wrap:break-word}
+.p9 .sv-cta{flex-direction:column;align-items:stretch;gap:10px;padding-top:12px}
+.p9 .sv-cta .btn-pink{width:100%;padding:15px 20px;font-size:15px}
+.p9 .inc-label{font-size:12.5px;text-align:center}
+.p9 .sv-photo{height:220px!important;border-radius:22px}
+.p9 .sv-deco{height:240px;top:0;border-radius:28px}
+.p9 .inc-card{flex-direction:column;gap:14px;margin-top:20px;padding:20px 16px;border-radius:20px}
+.p9 .inc-left{padding-top:0;gap:8px}
+.p9 .inc-left h2{font-size:20px}
+.p9 .inc-left p{font-size:13px;line-height:1.5}
+.p9 .inc-it{font-size:12.5px;line-height:1.4;gap:10px}
+.p9 .inc-it i{width:15px;height:15px;border-radius:8px;margin-top:1px}
+.p9 .inc-note{margin:2px 0 0;padding:10px 0 0;font-size:12.5px;line-height:1.5}
+/* --- method --- */
+.p9 .sv-method{padding:40px 0 44px}
+.p9 .mt-grid{margin-top:20px;gap:10px}
+.p9 .mt-card{padding:16px 14px;border-radius:18px}
+.p9 .mt-num{font-size:22px}
+.p9 .mt-card h3{font-size:15px;padding-top:6px}
+.p9 .mt-card>p{font-size:12.5px;line-height:1.45;padding-top:5px}
+.p9 .dot-it{font-size:12.5px;line-height:1.4;gap:9px}
+.p9 .dot-it i{width:14px;height:14px;border-radius:7px;margin-top:1px}
+.p9 .mt-card .dot-list{padding-top:10px;gap:8px}
+.p9 .mt-note{padding:10px 12px;font-size:12px;line-height:1.45}
+.p9 .mt-card .mt-note{margin-top:12px}
+/* --- zones --- */
+.p9 .sv-zones{padding:40px 0 44px}
+.p9 .zn-grid{margin-top:20px}
+.p9 .zn-card{padding:14px 14px 16px;border-radius:18px}
+.p9 .zn-card h3{font-size:17px;line-height:1.25}
+.p9 .zn-card .dot-list{padding-top:10px;gap:8px}
+.p9 .zn-extra{flex-direction:column;gap:12px;padding:16px 14px;border-radius:20px;margin-top:10px}
+.p9 .zn-extra .inc-left{padding-top:0;gap:6px}
+.p9 .zn-extra .inc-left h2{font-size:18px}
+.p9 .zn-extra .inc-left p{font-size:12.5px;line-height:1.45}
+.p9 .zn-extra .inc-grid{width:100%;flex:none;padding:0}
+/* --- move --- */
+.p9 .sv-move{padding:40px 0 44px}
+.p9 .mv-grid{flex-direction:column}
+.p9 .mv-main{padding:18px 16px;border-radius:20px}
+.p9 .mv-main h3,.p9 .mv-pink h3{font-size:18px}
+.p9 .mv-main>p{font-size:12.5px;line-height:1.5;padding-top:8px}
+.p9 .mv-cols{gap:12px;padding-top:12px}
+.p9 .mv-col h4{font-size:10.5px}
+.p9 .mv-col .dot-list{padding-top:8px;gap:8px}
+.p9 .mv-link{margin-top:12px;padding-top:0;font-size:13.5px}
+.p9 .mv-side{gap:12px}
+.p9 .mv-pink{padding:16px;border-radius:20px}
+.p9 .mv-pink>p{font-size:12.5px;line-height:1.5;padding-top:8px}
+.p9 .chips{gap:8px;padding-top:12px}
+.p9 .chip{padding:6px 12px;font-size:12px}
+.p9 .mv-pink .chips{padding-top:12px}
+.p9 .mv-decide{padding:16px;border-radius:20px}
+.p9 .mv-decide h3{font-size:16px}
+.p9 .mv-decide>p{font-size:12.5px;line-height:1.5;padding-top:6px}
+.p9 .mv-decide .chips{padding-top:10px}
+/* --- result --- */
+.p9 .sv-result{padding:40px 0 8px}
+.p9 .rs-grid{margin-top:20px}
+.p9 .rs-card{min-height:0;padding:14px 16px 16px;border-radius:16px}
+.p9 .rs-card b{font-size:30px}
+.p9 .rs-body{margin-top:10px;padding-top:10px;font-size:12.5px;line-height:1.45}
+/* --- vazhno --- */
+.p9 .sv-vazh{padding:40px 0 44px}
+.p9 .vz-grid{grid-template-columns:1fr;gap:16px}
+.p9 .vz-left h2{font-size:22px;line-height:1.25;padding-top:8px}
+.p9 .vz-left p{font-size:13px;line-height:1.5;padding-top:8px}
+.p9 .vz-link{padding-top:8px;font-size:13.5px}
+.p9 .vz-items{padding-top:0}
+/* --- fit --- */
+.p9 .sv-fit{padding:36px 0 44px}
+.p9 .fit-row{flex-direction:column;gap:12px;margin-top:20px}
+.p9 .fit-card{padding:16px 14px 18px;border-radius:20px}
+.p9 .fit-card h3{font-size:15.5px}
+.p9 .fit-list{gap:8px;padding-top:10px}
+.p9 .fit-it{font-size:12.5px;line-height:1.45;gap:10px}
+.p9 .fit-it b{font-size:13px;line-height:1.45;flex:none}
+.p9 .fit-note{font-size:12px;line-height:1.5;padding-top:10px}
+.p9 .fit-link{margin-top:10px;padding:7px 14px;font-size:12px}
+/* --- steps --- */
+.p9 .sv-steps{padding:36px 0 40px}
+.p9 .st-grid{grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.p9 .st-card{padding:14px 12px 16px;border-radius:16px}
+.p9 .st-card b{font-size:20px}
+.p9 .st-card h3{font-size:13.5px;padding-top:6px}
+.p9 .st-card p{font-size:12px;line-height:1.45;padding-top:4px}
+/* --- before/after --- */
+.p9 .sv-ba{padding:40px 0}
+.p9 .ba-head{gap:8px}
+.p9 .ba-head p{font-size:13.5px}
+.p9 .ba-row{flex-direction:column;gap:12px;margin-top:16px}
+.p9 .ba-card{border-radius:18px}
+.p9 .ba-pics{height:180px}
+.p9 .ba-pics img{height:180px}
+.p9 .ba-cap{padding:10px 12px;font-size:13px}
+/* --- gear --- */
+.p9 .sv-gear{padding:0 0 40px}
+.p9 .gear-card{flex-direction:column;gap:12px;padding:18px 16px;border-radius:20px}
+.p9 .gear-left h2{font-size:20px;padding-top:6px}
+.p9 .gear-left p{font-size:12.5px;line-height:1.5;padding-top:6px}
+.p9 .gear-tags{gap:8px;padding-top:2px}
+.p9 .gear-tag{padding:7px 12px;font-size:12px}
+/* --- reviews --- */
+.p9 .reviews{padding:40px 0 44px}
+.p9 .reviews-deco{display:none}
+.p9 .rev-track-wrap{margin-right:0;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+.p9 .rev-track-wrap::-webkit-scrollbar{display:none}
+.p9 .rev-card{width:300px;flex:none;padding:16px 16px 14px;border-radius:20px;gap:10px}
+.p9 .rev-text{font-size:13px;line-height:1.55}
+.p9 .revs-bottom{padding-top:4px}
+.p9 .reviews .btn-pink{padding:14px 26px;font-size:14px}
+/* --- order --- */
+.p9 .sv-order{padding:40px 0 36px}
+.p9 .ord-card{flex-direction:column;gap:20px;padding:20px 16px;border-radius:24px}
+.p9 .ord-left h2{font-size:22px;line-height:1.25}
+.p9 .ord-left>p{font-size:13px;line-height:1.5;padding-top:8px}
+.p9 .ord-checks{gap:8px;padding-top:10px}
+.p9 .ord-checks p{font-size:12.5px;line-height:1.4;gap:10px}
+.p9 .ord-checks i{width:22px;height:22px;border-radius:11px;font-size:11px}
+.p9 .ord-phone{padding-top:10px;font-size:15px}
+.p9 .ord-phone i{width:30px;height:30px;border-radius:15px;font-size:14px}
+.p9 .ord-form{gap:10px}
+.p9 .ord-row{gap:10px}
+.p9 .ord-row .inp{padding:12px 14px;font-size:14px}
+.p9 .ord-form .field .select{padding:12px 14px;font-size:14px}
+.p9 .ord-photo{padding:9px 12px;gap:10px}
+.p9 .ord-photo i{width:36px;height:36px;border-radius:10px;font-size:18px}
+.p9 .ord-photo span{font-size:11.5px;line-height:1.4}
+.p9 .ord-form .textarea{min-height:112px;padding:12px 14px;font-size:14px;line-height:1.45}
+.p9 .ord-form .order-send{padding:14px;font-size:15px;margin-top:2px}
+.p9 .ord-form .order-note{font-size:11px;line-height:1.45;padding-top:0}
+/* --- faq --- */
+.p9 .sv-faq{padding:40px 0 44px}
+.p9 .sv-faq .faq-in{gap:20px}
+/* --- cats --- */
+.p9 .sv-cats{padding:0 0 44px}
+.p9 .cats-head h2{font-size:22px}
+.p9 .cats-head a{font-size:13px}
+.p9 .cats{grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.p9 .cat-card{border-radius:16px}
+.p9 .cat-card img{height:140px}
+.p9 .cat-card h3{padding:10px 12px;font-size:12.5px;line-height:1.35}
 }
